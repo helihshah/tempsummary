@@ -34,7 +34,11 @@ public class ClimateSummaryController
     	List<TempSummary> tempSummary  = StreamSupport.stream(tempList.spliterator(), false)
     		      .map(t->setDateFormat(t))
     		      .collect(Collectors.toList());
-    	logger.debug("Log4j", () -> tempSummary.get(0).getStationName());
+    	  logger.trace("A TRACE Message");
+          logger.debug("A DEBUG Message");
+          logger.info("An INFO Message");
+          logger.warn("A WARN Message");
+          logger.error("An ERROR Message");
         model.addAttribute("temp_summary", tempSummary);
         
         return "index";
