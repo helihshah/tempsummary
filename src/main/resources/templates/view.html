@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+   xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+<head>
+<meta charset="utf-8"/>
+<title>Details</title>
+</head>
+<body>
+ <h2>Details</h2>
+ <table class="table table-striped table-bordered" style="width:30%">
+  <tbody>
+  <tr>
+  <td style="width:50%">StationName:</td><td th:text="${summary.stationName}"></td>
+  </tr>
+   <tr>
+  <td>Province:</td><td th:text="${summary.province}"></td>
+  </tr>
+   <tr>
+  <td>Date:</td><td th:text="${dateStr}"></td>
+  </tr>
+   <tr>
+  <td>Mean Temp:</td><td th:text="${summary.mean_temp}"></td>
+  </tr>
+   <tr>
+  <td>Highest Monthly Max Temp:</td><td th:text="${summary.highest_monthly_maxi_temp}"></td>
+  </tr>
+   <tr>
+  <td>Lowest Monthly Min Temp:</td><td th:text="${summary.lowest_monthly_min_temp}"></td>
+  </tr>
+  </tbody>
+  </table>
+  </body>
+</html>
